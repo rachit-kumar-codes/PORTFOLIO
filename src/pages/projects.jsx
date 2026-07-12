@@ -52,6 +52,7 @@ function Project() {
                     <img src={live} alt="live.png" />
                   </div>
                 </section>
+                <span className="category">{item.Category}</span>
               </article>
             ))}
         </div>

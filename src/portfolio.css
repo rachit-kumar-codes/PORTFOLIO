@@ -34,10 +34,10 @@ svg {
 :root {
   --bg-primary: #020617;
   --bg-surface: #020617;
-  --text-primary: #e5e7eb;
+  --text-primary: #e5e7ebd3;
   --text-muted: #94a3b8;
   --accent-blue: #38bdf8;
-  --accent-green: #22c55e;
+  --accent-green: #14863e;
   --accent-cyan: #06b6d4;
   --border-subtle: #1e293b;
 
@@ -128,13 +128,12 @@ p {
   color: var(--text-primary);
   padding: 8px;
   background-color: #0d0d0d;
-  border: 1px solid white;
-  transition: transform 0.3s ease;
+  border: 1px solid var(--text-muted);
   border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 .btn:hover {
   transform: scale(1.05);
-  border: 1px solid white;
 }
 
 .icon > img {
@@ -247,12 +246,19 @@ p {
   margin-inline: auto;
 }
 
+.profile-pic-sec {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
 .profile-pic-sec > img {
   height: 220px;
-  border-radius: 50%;
-  width: 220px;
+  width: 200px;
   object-fit: cover;
-  border: 2px solid var(--border-subtle);
+  margin-left: 7px;
 }
 
 .about-sec {
@@ -485,25 +491,40 @@ p {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.3px;
-  color: #eab308;
   padding: 5px 12px;
-  border: 1px solid var(--border-subtle);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.35);
+  transform: translateY(-2px);
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.65);
   white-space: nowrap;
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.2s ease,
-    color 0.25s ease;
 }
 
-.tech-badge:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.35);
-  transform: translateY(-2px);
+.category {
+  margin-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  width: fit-content;
+  letter-spacing: 1.5px;
+  color: rgb(193, 12, 121);
+  padding: 3px 8px;
+  text-shadow:
+    0 0 3px rgba(193, 12, 121, 0.534),
+    0 0 10px rgba(193, 12, 121, 0.34),
+    0 0 5px rgba(193, 12, 121, 0.12);
+  border: 1px solid rgba(118, 5, 73, 0.571);
+  border-radius: 25px;
+  background: var(--bg-surface);
+  white-space: nowrap;
+  margin-inline: auto;
+  box-shadow:
+    0 0 2px rgba(193, 12, 121, 0.534),
+    0 0 8px rgba(193, 12, 121, 0.34),
+    0 0 3px rgba(193, 12, 121, 0.12);
 }
+
 .poster {
   max-height: 12rem;
   width: fit-content;
@@ -515,12 +536,12 @@ p {
 .poster-img {
   object-fit: cover;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
   border-radius: 5px;
 }
 
 .poster-img:hover {
-  filter: brightness(1.05);
+  opacity: 0.85;
   transform: scale(1.05);
   transition: transform 0.4s ease-in-out;
 }
@@ -540,7 +561,7 @@ p {
   flex: 1;
   min-width: 0;
   gap: 10px;
-  border: 1px solid white;
+  border: 1px solid var(--text-muted);
   border-radius: 6px;
   transition: all 0.2s ease-in;
 }
@@ -553,7 +574,7 @@ p {
 }
 
 .demo-btn:hover {
-  background-color: rgb(7, 105, 158);
+  background-color: rgba(5, 102, 181, 0.402);
 }
 
 .demo-btn:hover a {
@@ -840,11 +861,6 @@ p {
     color: #f1f5f9;
   }
 
-  .profile-sec {
-    min-width: fit-content;
-    height: 350px;
-  }
-
   .main-para > h3 {
     font-size: smaller;
   }
@@ -864,7 +880,7 @@ p {
     width: 14px;
   }
 
-  .profile-pic-sec > img {
+  .profile-pic-sec {
     height: 180px;
     width: 180px;
   }
@@ -984,7 +1000,7 @@ p {
     padding: 30px 0;
   }
 
-  .tech-badges{
+  .tech-badges {
     justify-content: center;
   }
 
@@ -1026,6 +1042,10 @@ p {
   .demo-btn {
     gap: 2px;
     font-size: small;
+  }
+
+  .category {
+    font-size: 0.61rem;
   }
 }
 

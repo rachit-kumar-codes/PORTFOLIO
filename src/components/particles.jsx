@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function Particles({ quantity = 100 }) {
+export default function Particles({ quantity = 500 }) {
   const canvasRef = useRef(null);
   const canvasContainerRef = useRef(null);
   const context = useRef(null);

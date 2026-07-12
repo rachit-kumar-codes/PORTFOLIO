@@ -1,5 +1,5 @@
 import "../portfolio.css";
-import profilePic from "../assets/rk-new.png";
+import profilePic from "../assets/rachit-profile.png";
 import Arrow from "../assets/arrow.png";
 import pdf from "../assets/resume.png";
 import github from "../assets/github.png";
@@ -52,7 +52,7 @@ function Hero() {
               </div>
               <article className="main-line flex">
                 <h3>
-                  ● Full-Stack Engineer | ● AI-Integrated Systems | ● Security &
+                   Full-Stack Engineer |  AI-Integrated Systems |  Security &
                   Forensics Mindset
                 </h3>
                 <em>
