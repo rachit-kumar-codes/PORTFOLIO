@@ -1,0 +1,132 @@
+.skills-section {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-heading {
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: clamp(1.2rem, 3.4vw, 2.1rem);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--accent-cyan);
+}
+
+.skills-hint {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 40px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  padding: 0 10px;
+}
+
+.skills-grid-wrap {
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.skill-keycap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 2px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.skill-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  object-fit: contain;
+  padding: 4px;
+  filter: saturate(1.4);
+}
+
+@media (min-width: 400px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .skill-keycap {
+    width: 64px;
+    height: 64px;
+  }
+  .skill-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .skill-keycap {
+    width: 66px;
+    height: 66px;
+  }
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .skill-keycap {
+    width: 74px;
+    height: 74px;
+  }
+  .skill-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.skill-detail-wrap {
+  min-height: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 36px;
+  padding: 0 16px;
+}
+
+.skill-detail {
+  text-align: center;
+  max-width: min(480px, 90vw);
+}
+
+.skill-detail h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  margin-bottom: 8px;
+}
+
+.skill-detail p {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
