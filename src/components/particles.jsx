@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function Particles({ quantity = 500 }) {
+export default function Particles({ quantity = 200 }) {
   const canvasRef = useRef(null);
   const canvasContainerRef = useRef(null);
   const context = useRef(null);
@@ -24,7 +24,6 @@ export default function Particles({ quantity = 500 }) {
       window.removeEventListener("resize", initCanvas);
       window.removeEventListener("mousemove", onMouseMove);
     };
-   
   }, []);
 
   const onMouseMove = (e) => {
@@ -71,7 +70,18 @@ export default function Particles({ quantity = 500 }) {
     const dx = (Math.random() - 0.5) * 0.2;
     const dy = (Math.random() - 0.5) * 0.2;
     const magnetism = 0.1 + Math.random() * 4;
-    return { x, y, translateX, translateY, size, alpha, targetAlpha, dx, dy, magnetism };
+    return {
+      x,
+      y,
+      translateX,
+      translateY,
+      size,
+      alpha,
+      targetAlpha,
+      dx,
+      dy,
+      magnetism,
+    };
   };
 
   const drawCircle = (circle, update = false) => {
@@ -91,7 +101,12 @@ export default function Particles({ quantity = 500 }) {
 
   const clearContext = () => {
     if (context.current) {
-      context.current.clearRect(0, 0, canvasSize.current.w, canvasSize.current.h);
+      context.current.clearRect(
+        0,
+        0,
+        canvasSize.current.w,
+        canvasSize.current.h,
+      );
     }
   };
 
@@ -103,7 +118,8 @@ export default function Particles({ quantity = 500 }) {
   };
 
   const remapValue = (value, start1, end1, start2, end2) => {
-    const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
+    const remapped =
+      ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
     return remapped > 0 ? remapped : 0;
   };
 
@@ -117,19 +133,24 @@ export default function Particles({ quantity = 500 }) {
         canvasSize.current.h - circle.y - circle.translateY - circle.size,
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
-      const remapClosestEdge = parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2));
+      const remapClosestEdge = parseFloat(
+        remapValue(closestEdge, 0, 20, 0, 1).toFixed(2),
+      );
       if (remapClosestEdge > 1) {
         circle.alpha += 0.02;
-        if (circle.alpha > circle.targetAlpha) circle.alpha = circle.targetAlpha;
+        if (circle.alpha > circle.targetAlpha)
+          circle.alpha = circle.targetAlpha;
       } else {
         circle.alpha = circle.targetAlpha * remapClosestEdge;
       }
       circle.x += circle.dx;
       circle.y += circle.dy;
       circle.translateX +=
-        (mouse.current.x / (staticity / circle.magnetism) - circle.translateX) / ease;
+        (mouse.current.x / (staticity / circle.magnetism) - circle.translateX) /
+        ease;
       circle.translateY +=
-        (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) / ease;
+        (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
+        ease;
 
       if (
         circle.x < -circle.size ||
@@ -149,7 +170,7 @@ export default function Particles({ quantity = 500 }) {
             translateY: circle.translateY,
             alpha: circle.alpha,
           },
-          true
+          true,
         );
       }
     });

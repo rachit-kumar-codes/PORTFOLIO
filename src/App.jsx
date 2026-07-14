@@ -8,7 +8,7 @@ import Education from "./components/education"
 function App() {
   return (
     <>
-      <Particles quantity={500} />
+      <Particles quantity={200} />
       <Navbar />
       <Hero />
       <Education/>
