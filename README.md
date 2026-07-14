@@ -62,24 +62,24 @@ visual language.
 
 <div align="center">
 
-**Home**
+### **Home**
 
-<img width="1415" height="947" alt="Screenshot 2026-07-12 172021" src="https://github.com/user-attachments/assets/44670f8d-25b7-4173-aabb-b5b469ed2310" />
+<img width="1330" height="960" alt="image" src="https://github.com/user-attachments/assets/ec72d062-9b8d-4d4d-9904-22baf03155a7" />
 
 ---
 
-**Education**
+### **Education**
 
 <img width="1411" height="955" alt="Screenshot 2026-07-12 172042" src="https://github.com/user-attachments/assets/47213541-84e7-4b05-8d9b-22247ef8f010" />
 
 ---
 
-**Skills**
+### **Skills**
 <img width="1408" height="902" alt="Screenshot 2026-07-12 172057" src="https://github.com/user-attachments/assets/156f5c05-cdb7-42ba-9be7-8d3d2d9bdb65" />
 
 ---
 
-**Projects**
+### **Projects**
 
 <img width="1417" height="972" alt="Screenshot 2026-07-12 172116" src="https://github.com/user-attachments/assets/93d944c9-3720-4464-a213-e85859eef15f" />
 
