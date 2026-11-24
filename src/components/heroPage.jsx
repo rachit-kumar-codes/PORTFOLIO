@@ -16,7 +16,7 @@ function Hero() {
       <div id="hero" className="HeroBody">
         <main className="container HeroMain">
           <div className="hero container">
-            <section className="profile-sec flex">
+            <section id="aboutt" className="profile-sec flex">
               <h1 className="heading">{`< WELCOME TO RK'S SPACE ! />`}</h1>
               <div className="profile-picture">
                 <article className="profile-pic-sec">
@@ -31,7 +31,7 @@ function Hero() {
               <h2 className="titlename">Rachit Kumar</h2>
             </section>
 
-            <div id="about" className="about-sec flex">
+            <div className="about-sec flex">
               <div className="bio-data">
                 <div>
                   <FaBriefcase />
@@ -52,7 +52,7 @@ function Hero() {
               </div>
               <article className="main-line flex">
                 <h3>
-                   Full-Stack Engineer |  AI-Integrated Systems |  Security &
+                  Full-Stack Engineer | AI-Integrated Systems | Security &
                   Forensics Mindset
                 </h3>
                 <em>
@@ -62,7 +62,7 @@ function Hero() {
               </article>
               <br />
 
-              <article id="about" className="main-para flex">
+              <article className="main-para flex">
                 <p>
                   I&apos;m a{" "}
                   <strong className="str1">Full-stack Developer</strong>{" "}

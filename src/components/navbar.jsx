@@ -11,7 +11,7 @@ function Navbar() {
             </a>
           </span>
           <section className="NavSec flex">
-            <a className="btn" href="#about">
+            <a className="btn" href="#aboutt">
               About me
             </a>
             <a className="btn" href="#skills">
