@@ -1,5 +1,5 @@
 import "../portfolio.css";
-import profilePic from "../assets/rachit-profile.png";
+import profilePic from "../assets/rk-pic2.jpeg";
 import Arrow from "../assets/arrow.png";
 import pdf from "../assets/resume.png";
 import github from "../assets/github.png";
